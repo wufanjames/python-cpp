@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>历史</title>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body background="http://www.wyzu.cn/uploadfile/2012/0430/20120430115357396.jpg">
+<div align="center" style="margin-top:50px">
+    <div style="color:#FF82AB"><h1>转换记录</h1></div>
+    </div>
+<table class="table table-bordered table-hover table-responsive">
+    <tr>
+        <th class="success">序号</th>
+        <th class="success">原字符</th>
+        <th class="success">目标字符</th>
+    </tr>
+    {% for r in re %}
+    <tr>
+        <td class="success">{{r.id}}</td>
+        <td class="success">{{r.source}}</td>
+        <td class="success">{{r.target}}</td>
+    </tr>
+    {% end %}
+</table>
+<div align="center" style="margin-top:20px">
+<input type="button" class="btn btn-success btn-lg" value="返回首页"
+onclick="javascrtpt:window.location.href='/'">
+ </div>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>
